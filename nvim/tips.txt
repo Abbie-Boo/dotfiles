@@ -1,0 +1,5 @@
+# Window navigation.
+C-w for navigating the window
+ + q to quit,
+ + h j k l to move up down right and left
+
