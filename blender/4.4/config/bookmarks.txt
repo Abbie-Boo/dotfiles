@@ -1,0 +1,7 @@
+[Bookmarks]
+/home/abbie/Documents/Blender/
+/home/abbie/Documents/Blender/Project/
+/home/abbie/Documents/Blender/HDRI/
+[Recent]
+/home/abbie/Documents/Blender/Project/Forest/
+/home/abbie/Downloads/cyberpunk-bike/source/bike test/
