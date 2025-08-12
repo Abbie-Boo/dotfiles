@@ -1,0 +1,14 @@
+include marsrc
+
+set window-height 900
+set window-width  800
+set guioptions none
+set adjust_window width
+set recolor "true"
+set recolor-keephue "true"
+
+# Keymaps
+map <S-d> toggle_page_mode
+map r reload
+map R rotate
+map i recolor
