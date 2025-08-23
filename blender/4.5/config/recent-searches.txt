@@ -1,7 +1,5 @@
 Generate ▸ Solidify
 Generate ▸ Bevel
-Mesh ▸ Cube
-Generate ▸ Mirror
 Add ▸ Lattice
 Deform ▸ Lattice
 Geometry ▸ Operations ▸ Merge by Distance
@@ -9,6 +7,13 @@ Mesh ▸ Operations ▸ Triangulate
 Texture ▸ Noise Texture
 Utilities ▸ Math ▸ Compare
 Mesh ▸ Operations ▸ Subdivide Mesh
-Mesh ▸ Plane
+Empty ▸ Sphere
+Mesh ▸ UV Sphere
+Generate ▸ Boolean
+Mesh ▸ Cube
+   cutter
 Generate ▸ Subdivision Surface
+Generate ▸ Mirror
+Generate ▸ Array
+Mesh ▸ Plane
 Light ▸ Sun

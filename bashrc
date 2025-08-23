@@ -1,28 +1,13 @@
-# .bashrc
+#
+# ~/.bashrc
+#
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
-fi
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
-# User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-fi
-export PATH
-
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
-# User specific aliases and functions
-if [ -d ~/.bashrc.d ]; then
-    for rc in ~/.bashrc.d/*; do
-        if [ -f "$rc" ]; then
-            . "$rc"
-        fi
-    done
-fi
-unset rc
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
 
 # options
 bind 'set completion-ignore-case on'
@@ -31,11 +16,8 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 HISTCONTROL=ignoreboth
 
-# Variables
-CONFIG='~/.config'
 EDITOR='nvim'
 FILE_MANAGER='nautilus'
-
 # Alias
 alias brc='$EDITOR ~/.bashrc'
 alias sbrc='source ~/.bashrc'
@@ -51,5 +33,4 @@ export CARGO_HOME=~/.local/rust/
 export RUSTUP_HOME=~/.local/rust/
 export HISTFILE=~/.config/bash_history
 
-# Deno
 . "/home/abbie/.local/rust//env"

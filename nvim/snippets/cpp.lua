@@ -1,10 +1,11 @@
 return {
-s("#", fmt([[
+  s("#", fmt([[
 #include <iostream>
 
 int main() {{
-  std::cout << "{}";
+  std::cout << "{}\n";
+  {}
   return 0;
 }}
-]], { i(0, "Hello world") }))
+]], { i(1, "Hello world"), i(0) }))
 }

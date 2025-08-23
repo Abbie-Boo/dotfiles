@@ -1,20 +1,26 @@
 return {
--- telescope
-  'nvim-telescope/telescope.nvim', tag = '0.1.8',
+  -- telescope
+  'nvim-telescope/telescope.nvim',
+  tag = '0.1.8',
   dependencies = { 'nvim-lua/plenary.nvim' },
   config = function()
--- Telescope key maps
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })
-vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
-vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Help tags" })
-vim.keymap.set("n", "<leader>fo", builtin.vim_options, { desc = "Find vim options" })
-vim.keymap.set("n", "<leader>fc", 
-function()
-  builtin.find_files({cwd = vim.fn.stdpath("config"),})
-end, { desc = "Find vim config files" })
-
+    -- Telescope key maps
+    local builtin = require("telescope.builtin")
+    vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
+    vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })
+    vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
+    vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Help tags" })
+    vim.keymap.set("n", "<leader>fo", builtin.vim_options, { desc = "Find vim options" })
+    vim.keymap.set("n", "<leader>fc",
+      function()
+        builtin.find_files({ cwd = vim.fn.stdpath("config"), })
+      end, { desc = "Find vim config files" })
+    vim.keymap.set("n", "<leader>fr", function()
+      builtin.find_files({
+        cwd = vim.fn.expand('~/Bunny/rust'),
+        find_command = { 'fd', '--type', 'f', '--extension', 'rs' },
+      })
+    end, { desc = "[F]ind [R]ust source files" })
   end
 
 }

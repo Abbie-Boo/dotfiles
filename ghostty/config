@@ -1,0 +1,14 @@
+font-family = "Cascadia Code"
+font-family-bold = "Cascadia Code"
+font-family-italic = "Cascadia Code"
+font-family-bold-italic = "Cascadia Code"
+font-size = 12
+theme = light:GruvboxLightHard,dark:gruvbox
+window-height = 30
+window-width = 100
+gtk-titlebar-hide-when-maximized = true
+gtk-titlebar = false
+window-padding-x = 15
+window-padding-y = 15
+focus-follows-mouse = true
+
